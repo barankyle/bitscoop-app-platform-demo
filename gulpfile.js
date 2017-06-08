@@ -38,7 +38,10 @@ gulp.task('bundle', function() {
 		'src/index.js',
 		'src/node_modules/**',
 		'src/package.json'
-	])
+	], {
+		base: 'src',
+		nodir: true
+	})
 		.pipe(rename(function(path) {
 			path.dirname = path.dirname.replace(renameExpression, pkg.name);
 
@@ -67,7 +70,10 @@ gulp.task('bundle:github', function() {
 		'src/views/github/index.js',
 		'src/node_modules/**',
 		'src/package.json'
-	])
+	], {
+		base: 'src',
+		nodir: true
+	})
 		.pipe(rename(function(path) {
 			path.dirname = path.dirname.replace(renameExpression, pkg.name);
 
@@ -91,7 +97,10 @@ gulp.task('bundle:google', function() {
 		'src/views/google/index.js',
 		'src/node_modules/**',
 		'src/package.json'
-	])
+	], {
+		base: 'src',
+		nodir: true
+	})
 		.pipe(rename(function(path) {
 			path.dirname = path.dirname.replace(renameExpression, pkg.name);
 
@@ -115,7 +124,10 @@ gulp.task('bundle:postman', function() {
 		'src/views/postman/index.js',
 		'src/node_modules/**',
 		'src/package.json'
-	])
+	], {
+		base: 'src',
+		nodir: true
+	})
 		.pipe(rename(function(path) {
 			path.dirname = path.dirname.replace(renameExpression, pkg.name);
 
@@ -139,7 +151,10 @@ gulp.task('bundle:statuscake', function() {
 		'src/views/statuscake/index.js',
 		'src/node_modules/**',
 		'src/package.json'
-	])
+	], {
+		base: 'src',
+		nodir: true
+	})
 		.pipe(rename(function(path) {
 			path.dirname = path.dirname.replace(renameExpression, pkg.name);
 
